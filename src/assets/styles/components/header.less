@@ -1,0 +1,146 @@
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 43px;
+  .sm-block({
+    flex-direction: column;
+  });
+  div {
+    .sm-block({
+      margin: 10px 0;
+    });
+    ul {
+      display: flex;
+      align-items: center;
+      li a {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &.header-links {
+      ul li {
+        &:first-child {
+          padding-right: 12px;
+          border-right: 1px solid @header-links-base-color;
+          span {
+            font-size: 1.125em;
+            padding-right: 12px;
+          }
+        }
+
+        &:last-child {
+          padding-left: 12px;
+          span {
+            font-size: 1.125em;
+            padding-left: 12px;
+          }
+        }
+
+        a {
+          color: @header-links-base-color;
+          font-family: @font-family-regular;
+          font-size: 0.875em;
+
+          &:hover {
+            color: @header-links-hover-color;
+            .transition();
+          }
+        }
+      }
+    }
+
+    &.header-controls {
+      ul {
+        .xs-block({
+          flex-direction: column;
+          align-items: left;
+        });
+        li {
+          .xs-block({
+            margin: 10px 0;
+          });
+          a {
+            color: @header-buttons-color;
+            font-family: @font-family-bold;
+          }
+          &#login-btn {
+            font-size: 0.875em;
+            text-transform: uppercase;
+            padding-right: 10px;
+            margin-right: 30px;
+            span {
+              font-size: 1.25em;
+              margin-right: 10px;
+            }
+          }
+          &#open-btn {
+            background-color: @header-btn-open-bg-color;
+            margin-right: 20px;
+            a{
+              font-size: 0.75em;
+              text-transform: uppercase;
+              padding: 10px 13px;
+              position: relative;
+              &::before {
+                position: absolute;
+                content: '';
+                border-style: solid;
+                transition-duration: 0.3s;
+                transition-property: right;
+                top: ~"calc(50% - 10px)";
+                right: 0;
+                border-width: 10px 0 10px 10px;
+                border-color: transparent transparent transparent @header-btn-open-bg-color;
+              }
+
+              &:hover::before {
+                right: -10px;
+              }
+            }
+          }
+
+          &#demo-btn {
+            background-color: @header-btn-demo-bg-color;
+            margin-right: 15px;
+            a{
+              font-size: 0.75em;
+              text-transform: uppercase;
+              padding: 10px 16px;
+              position: relative;
+              &::before {
+                position: absolute;
+                content: '';
+                border-style: solid;
+                transition-duration: 0.3s;
+                transition-property: right;
+                top: ~"calc(50% - 10px)";
+                right: 0;
+                border-width: 10px 0 10px 10px;
+                border-color: transparent transparent transparent @header-btn-demo-bg-color;
+              }
+
+              &:hover::before {
+                right: -10px;
+              }
+            }
+          }
+
+          &#lang-selector {
+            a {
+              font-family: @font-family-roboto-regular;
+              font-size: 0.75em;
+              text-transform: uppercase;
+              padding: 0 15px;
+              fill: @header-links-base-color;
+
+              span {
+                padding: 0 7px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

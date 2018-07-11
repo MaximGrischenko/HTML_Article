@@ -1,0 +1,39 @@
+#card-company {
+  table {
+    margin-top: 25px;
+
+    tr {
+      &:not(:first-child) {
+        border-bottom: 1px solid @card-table-border-color;
+      }
+      th {
+        background-color: @card-table-head-color;
+        height: 48px;
+        div {
+          fill: #fff;
+          margin-left: 25px;
+          svg {
+            line-height: 48px;
+          }
+        }
+      }
+      td {
+        width: 50%;
+        padding: 13px 28px;
+        &:first-child {
+          border-right: 1px solid @card-table-border-color;
+          color: @card-table-text-color;
+          font-family: @font-family-bold;
+          font-size: 0.75em;
+          text-transform: uppercase;
+        }
+        &:last-child {
+          color: @card-table-text-color;
+          font-family: @font-family-regular;
+          font-size: 0.75em;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

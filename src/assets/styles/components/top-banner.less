@@ -1,0 +1,24 @@
+.banner-content {
+  min-height: 398px;
+  position: relative;
+  overflow-y: hidden;
+  padding-left: 90px;
+  div:first-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    h1 {
+      color: @banner-text-color;
+      font-family: @font-family-bold;
+      font-size: 2.125em;
+      line-height: 43.36px;
+      text-transform: uppercase;
+    }
+  }
+  div:last-child {
+    position: absolute;
+    bottom: -4px;
+    fill: @banner-logo-bg-color;
+    background-color: @banner-text-color;
+  }
+}
